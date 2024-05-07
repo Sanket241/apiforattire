@@ -29,11 +29,12 @@
 // }
 
 const Product = require('../models/Schema')
+
 const data =async(req,resp)=>{
     const result = await Product.find();
     console.log(result);
-    resp.status(200).send(result);
-    return result;
+    return resp.status(200).send(result);
+   
 
 }
 module.exports = data;
